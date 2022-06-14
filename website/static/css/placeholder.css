@@ -1,0 +1,141 @@
+:root{
+
+    --primary: #222831;
+    --secondary: #393E46;
+    --tertiary: #FFD369;
+    --font-color: #EEEEEE;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;    
+}
+
+body{
+    background: var(--secondary);
+}
+
+.left-box{
+    display: flex;
+    position: relative;
+}
+
+.left-box .sidebar{
+    position: fixed;
+    background: var(--primary);
+    height: 100%;
+    width: 250px;
+    padding: 25px 0;
+}
+
+.sidebar-title{
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.left-box .sidebar .sidebar-title{
+    color: var(--font-color);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.left-box .sidebar ul li{
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+    padding-inline: 25px;
+    padding-block: 35px;
+    border-top: 1px solid var(--font-color);
+}
+
+.left-box .sidebar ul li:hover,
+.left-box .sidebar ul li:focus{
+    background: var(--tertiary);
+    color: var(--primary);
+    border-top: 1px solid var(--primary);
+}
+
+.left-box .sidebar ul li a{
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-inline: 25px;
+    padding-block: 35px;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--font-color);
+    display: block;
+}
+.left-box .sidebar ul li:hover a,
+.left-box .sidebar ul li:focus a{
+    color: var(--primary);
+}
+
+.horizontal-nav{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .left-box{
+        border-bottom: 1px solid var(--font-color);;
+    }
+
+    .left-box .sidebar{
+        position: relative;
+        background: var(--primary);
+        height: 110px;
+        width: 100%;
+        padding: 25px 0;
+    }
+
+    .left-box .sidebar .sidebar-title{
+        width: 300px;
+        text-align: left;
+        padding-left: 19.5px;
+    }
+
+    .left-box .sidebar ul {
+        position: relative;
+    }
+
+    .left-box .sidebar ul li{
+        display: none;
+        border-top: none;
+    }
+
+    .left-box .sidebar ul li a{
+        display: none;  
+    }
+
+    .left-box .sidebar ul .horizontal-nav,
+    .left-box .sidebar ul .horizontal-nav .horizontal-button{
+        display: block;
+    }
+
+    .left-box .sidebar ul .horizontal-nav{
+
+        position: absolute;
+        width: 25vw;
+        height: 111px;
+        z-index: 99;
+        top: -110px;        
+        padding: 0px;
+        border-left: 1px solid var(--font-color);
+
+    }
+
+    .left-box .sidebar ul .horizontal-nav .horizontal-button{
+        padding: 40px 9vw;
+    }
+
+    .left-box .sidebar ul .Home{
+        right: 25vw;
+    }
+    .left-box .sidebar ul .Topics{
+        right: 0px;
+    }
+}

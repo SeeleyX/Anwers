@@ -4,3 +4,6 @@ from django.shortcuts import render
 def index(request):
 	context_dict = {}
 	return render(request, 'learn/index.html', context=context_dict)
+
+def run_john(request):
+	return render(request, 'learn/john.html', context={})

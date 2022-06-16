@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="{% static 'css/placeholder.css' %}">
 		{% block extra_links %}
-
+		<link rel="stylesheet" href="{% static 'css/Astronomy_Main.css' %}">
 		{% endblock %}
 		<title>
 			TITLE: 
@@ -22,21 +22,21 @@
 				<div class="sidebar">
 					<h2 class="sidebar-title">ANWERS</h2>
 					<ul>
-						<li class="horizontal-nav Home"><a href="{% url 'learn:astronomy' %}" class="main-link horizontal-button ">Home </a></li>
-						<li class="horizontal-nav Topics"><a href="{% url 'learn:astronomy' %}" class=" main-link horizontal-button ">Topics </a>
+						<li class="horizontal-nav Home"><a href="{% url 'learn:astronomy' %}" class="main-link horizontal-button Home ">Home </a></li>
+						<li class="horizontal-nav Topics"><a href="{% url 'learn:astronomy' %}" class=" main-link horizontal-button inactive">Topics </a>
 							<div class="dropdown">
 								<a href="#" class="nav-Computing">Computing Science</a>
 								<a href="#" class="nav-Physics">Physics</a>
 								<a href="#" class="nav-Maths">Maths</a>
-								<a href="#" class="nav-Astro">Astronomy</a>
+								<a href="{% url 'learn:astronomy' %}" class="nav-Astro">Astronomy</a>
 							</div>
 						</li>
-						<li><a class="main-link" href="#">Computing Science </a></li>
-						<li><a class="main-link" href="#">Physics </a></li>
-						<li><a class="main-link" href="#">Maths </a></li>
-						<li><a class="main-link" href="{% url 'learn:astronomy' %}">Astronomy </a></li>
-						
-					</ul>
+						<li><a class="main-link inactive" href="#">Computing Science </a></li>
+						<li><a class="main-link inactive" href="#">Physics </a></li>
+						<li><a class="main-link inactive" href="#">Maths </a></li>
+						<li><a class="main-link inactive" href="{% url 'learn:astronomy' %}">Astronomy </a></li>						
+					</ul>						
+					<a class="log-in-button" href="{% url 'learn:astronomy' %}">Login / Register </a>
 				</div>
 			</div>
 		{% endblock %}

@@ -19,6 +19,7 @@ body{
 
 
 
+
 .left-box{
     display: flex;
     position: relative;
@@ -29,7 +30,7 @@ body{
     background: var(--primary);
     height: 100%;
     width: 250px;
-    padding: 25px 0;
+    padding-top: 25px;
 }
 
 .sidebar-title{
@@ -51,13 +52,14 @@ body{
     padding-inline: 25px;
     padding-block: 35px;
     border-top: 1px solid var(--font-color);
+    transition: all 200ms ease-in;
 }
 
 .left-box .sidebar ul li:hover,
 .left-box .sidebar ul li:focus{
     background: var(--tertiary);
     color: var(--primary);
-    border-top: 1px solid var(--primary);
+   
 }
 
 .left-box .sidebar ul li .main-link{
@@ -69,10 +71,19 @@ body{
     padding-inline: 25px;
     padding-block: 35px;
     font-size: var(--font-links);
-    text-decoration: none;
-    color: var(--font-color);
+    text-decoration: none;    
     display: block;
+    transition: all 100ms ease-in;
 }
+
+.left-box .sidebar ul li .inactive{
+    color: var(--font-color);
+}
+
+.left-box .sidebar ul li .Home{
+    color: var(--primary);
+}
+
 .left-box .sidebar ul li:hover .main-link,
 .left-box .sidebar ul li:focus .main-link{
     color: var(--primary);
@@ -82,6 +93,25 @@ body{
 .horizontal-nav{
     display: none;
 }
+
+.left-box .sidebar .log-in-button{
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    color: var(--font-color);
+    background: var(--secondary);
+    bottom: 20px;
+    left: 45px;
+    text-align: center;
+    padding-block: 20px;
+    text-decoration: none;
+}
+
+.left-box .sidebar .log-in-button:hover{
+    color: var(--primary);
+    background: var(--tertiary);
+}
+
 
 
 @media only screen and (max-width: 1000px) {
@@ -125,7 +155,7 @@ body{
     .left-box .sidebar ul .horizontal-nav{
 
         position: absolute;
-        width: 25vw;
+        width: 16.6vw;
         height: 111px;
         z-index: 99;
         top: -110px;        
@@ -135,16 +165,19 @@ body{
     }
 
     .left-box .sidebar ul .horizontal-nav .horizontal-button{
-        padding: 40px 9vw;
+        padding: 40px 5.5vw;
     }
 
     .left-box .sidebar ul .Home{
-        right: 25vw;
+        left: 50vw;
+        color: var(--primary);
+        background: var(--tertiary);
     }
     .left-box .sidebar ul .Topics{
         position: absolute;
         display: inline-block;
-        right: 0px;
+        left: 66.6vw;
+        
     }
 
     .left-box .sidebar ul .Topics .dropdown{
@@ -154,10 +187,11 @@ body{
         height:calc(4*110px);
         transform: translateY(90px);
         opacity: 0%;
-        transition: all 300ms ease-in;
+        transition: all 200ms ease-in;
         pointer-events: none;
         border-left: var(--font-color) solid 1px;
         border-bottom: var(--font-color) solid 1px;
+        border-right: var(--font-color) solid 1px;
     }
 
     .left-box .sidebar ul .Topics .dropdown a{
@@ -170,6 +204,7 @@ body{
         text-align: center;
         text-decoration: none;
         font-size: var(--font-links);
+        transition: all 100ms ease-in;
     }
 
     .left-box .sidebar ul .Topics .dropdown a:hover{
@@ -196,5 +231,11 @@ body{
     .nav-Astro{
         z-index: 20;
         bottom: 0%;
+    }
+
+    .left-box .sidebar .log-in-button{
+        left: 85.3vw;
+        width: 12.6vw;
+        padding-block: 19px;
     }
 }

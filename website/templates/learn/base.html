@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="{% static 'css/placeholder.css' %}">
+		<script src="https://kit.fontawesome.com/b4c5c460e3.js" crossorigin="anonymous"> </script>
+		{% block extra_links %}
+
+		{% endblock %}
+		<title>
+			TITLE: 
+			{% block title_block %}
+				base
+			{% endblock %}
+		</title>
+	</head>
+
+
+	<body>
+		{% block navbar_block %}
+			<div class="left-box">
+				<div class="sidebar">
+					<h2 class="sidebar-title">ANWERS</h2>
+					<ul>
+						<li class="horizontal-nav Home"><a href="{% url 'learn:astronomy' %}" class="horizontal-button ">Home </a></li>
+						<li class="horizontal-nav Topics"><a href="{% url 'learn:astronomy' %}" class="horizontal-button ">Topics </a></li>
+						<li><a href="#">Computing Science </a></li>
+						<li><a href="#">Physics </a></li>
+						<li><a href="#">Maths </a></li>
+						<li><a href="{% url 'learn:astronomy' %}">Astronomy </a></li>
+						
+					</ul>
+				</div>
+			</div>
+		{% endblock %}
+		{% block body_block %}
+		{% endblock %}
+		</script>
+	</body>
+
+</html>

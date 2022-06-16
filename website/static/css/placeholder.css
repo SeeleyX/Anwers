@@ -16,6 +16,12 @@ body{
     background: var(--secondary);
 }
 
+i {
+  height: 400px;
+  width: 400px;
+  z-index: 100;
+}
+
 .left-box{
     display: flex;
     position: relative;

@@ -4,6 +4,7 @@
     --secondary: #393E46;
     --tertiary: #FFD369;
     --font-color: #EEEEEE;
+    --font-links: 20px;
 }
 
 *{
@@ -16,11 +17,7 @@ body{
     background: var(--secondary);
 }
 
-i {
-  height: 400px;
-  width: 400px;
-  z-index: 100;
-}
+
 
 .left-box{
     display: flex;
@@ -50,6 +47,7 @@ i {
     position: relative;
     text-decoration: none;
     list-style: none;
+    height: 110px;
     padding-inline: 25px;
     padding-block: 35px;
     border-top: 1px solid var(--font-color);
@@ -62,7 +60,7 @@ i {
     border-top: 1px solid var(--primary);
 }
 
-.left-box .sidebar ul li a{
+.left-box .sidebar ul li .main-link{
     left: 0%;
     top: 0%;
     width: 100%;
@@ -70,19 +68,21 @@ i {
     position: absolute;
     padding-inline: 25px;
     padding-block: 35px;
-    font-size: 20px;
+    font-size: var(--font-links);
     text-decoration: none;
     color: var(--font-color);
     display: block;
 }
-.left-box .sidebar ul li:hover a,
-.left-box .sidebar ul li:focus a{
+.left-box .sidebar ul li:hover .main-link,
+.left-box .sidebar ul li:focus .main-link{
     color: var(--primary);
 }
+
 
 .horizontal-nav{
     display: none;
 }
+
 
 @media only screen and (max-width: 1000px) {
 
@@ -113,7 +113,7 @@ i {
         border-top: none;
     }
 
-    .left-box .sidebar ul li a{
+    .left-box .sidebar ul li .main-link{
         display: none;  
     }
 
@@ -142,6 +142,59 @@ i {
         right: 25vw;
     }
     .left-box .sidebar ul .Topics{
+        position: absolute;
+        display: inline-block;
         right: 0px;
+    }
+
+    .left-box .sidebar ul .Topics .dropdown{
+        position: relative;
+        background:var(--primary);
+        width: 25vw ;
+        height:calc(4*110px);
+        transform: translateY(90px);
+        opacity: 0%;
+        transition: all 300ms ease-in;
+        pointer-events: none;
+        border-left: var(--font-color) solid 1px;
+        border-bottom: var(--font-color) solid 1px;
+    }
+
+    .left-box .sidebar ul .Topics .dropdown a{
+        position:absolute;
+        width: 100%;
+        height: 110px;
+        padding-block: 45px;
+        color: var(--font-color);
+        border-top: 1px solid var(--font-color);
+        text-align: center;
+        text-decoration: none;
+        font-size: var(--font-links);
+    }
+
+    .left-box .sidebar ul .Topics .dropdown a:hover{
+        background-color: var(--tertiary);
+        color: var(--primary);
+    }
+
+    .left-box .sidebar ul .Topics:hover .dropdown{
+        transform: translateY(111px);
+        opacity: 100%;
+        pointer-events: auto;
+    }
+    
+    .nav-Physics{
+        z-index: 18;
+        top: 110px;
+    }
+
+    .nav-Maths{
+        z-index: 19;
+        top: 220px;
+    }
+
+    .nav-Astro{
+        z-index: 20;
+        bottom: 0%;
     }
 }

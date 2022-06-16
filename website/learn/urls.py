@@ -5,6 +5,6 @@ from learn import views
 app_name = 'learn'
 
 urlpatterns = [
-	path('', views.index, name='index'),
-	path('astronomy/', views.astronomy, name='astronomy')
+	path('', views.learn_base, name="learn_base"),
+	path('astronomy/', views.astronomy, name='astronomy'),
 ]

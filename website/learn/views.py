@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
 
-# Create your views here.
 def index(request):
 	context_dict = {}
 	return render(request, 'learn/index.html', context=context_dict)
@@ -8,3 +8,6 @@ def index(request):
 def astronomy(request):
 	context_dict = {}
 	return render(request, 'learn/astronomy.html', context=context_dict)
+
+def learn_base(request):
+	return redirect("/")

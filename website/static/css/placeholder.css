@@ -15,14 +15,40 @@
 
 body{
     background: var(--secondary);
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 
-
+.grid{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 111px 1fr;
+    height: 100vh;
+    width: 100vw;
+    }
 
 .left-box{
     display: flex;
     position: relative;
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    z-index: 1;
+    overflow: visible;
+}
+
+.main-content{
+    position: relative;
+    width: 100%;
+    background: var(--secondary);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    z-index: 0;
 }
 
 .left-box .sidebar{
@@ -31,6 +57,9 @@ body{
     height: 100%;
     width: 250px;
     padding-top: 25px;
+    transition: all 500ms ease-in-out;
+    border-right: 1px solid var(--font-color);
+    border-bottom: 1px solid var(--font-color)
 }
 
 .sidebar-title{
@@ -40,7 +69,7 @@ body{
 
 .left-box .sidebar .sidebar-title{
     color: var(--font-color);
-    text-align: center;
+    margin-left: 15px;
     margin-bottom: 25px;
 }
 
@@ -92,6 +121,7 @@ body{
 
 .horizontal-nav{
     display: none;
+    transition: display 500ms ease;
 }
 
 .left-box .sidebar .log-in-button{
@@ -105,6 +135,7 @@ body{
     text-align: center;
     padding-block: 20px;
     text-decoration: none;
+    transition: background 100ms ease-in;
 }
 
 .left-box .sidebar .log-in-button:hover{
@@ -116,8 +147,20 @@ body{
 
 @media only screen and (max-width: 1000px) {
 
+    .main-content{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+
     .left-box{
-        border-bottom: 1px solid var(--font-color);;
+        border-bottom: 1px solid var(--font-color);
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
     }
 
     .left-box .sidebar{
@@ -126,12 +169,12 @@ body{
         height: 110px;
         width: 100%;
         padding: 25px 0;
+        border-right: none;
     }
 
     .left-box .sidebar .sidebar-title{
         width: 300px;
         text-align: left;
-        padding-left: 19.5px;
     }
 
     .left-box .sidebar ul {

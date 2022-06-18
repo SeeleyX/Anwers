@@ -18,6 +18,7 @@
 
 	<body>
 		{% block navbar_block %}
+		<div class="grid">
 			<div class="left-box">
 				<div class="sidebar">
 					<h2 class="sidebar-title">ANWERS</h2>
@@ -39,10 +40,14 @@
 					<a class="log-in-button" href="{% url 'learn:astronomy' %}">Login / Register </a>
 				</div>
 			</div>
+			<div class="main-content">
+				
+			</div>
+		</div>
 		{% endblock %}
 		{% block body_block %}
 		{% endblock %}
-		</script>
+		
 	</body>
 
 </html>

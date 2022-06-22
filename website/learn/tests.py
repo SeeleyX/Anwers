@@ -1,3 +1,7 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 
-# Create your tests here.
+class TestBasicNonLoginViews(TestCase):
+
+	def test_testhomepage(self):
+		response = self.client.get('/')
+		self.assertTemplateUsed(response, 'learn/index.html')

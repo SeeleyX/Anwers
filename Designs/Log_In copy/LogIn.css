@@ -56,6 +56,7 @@ body{
 .grid{
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 
@@ -120,8 +121,24 @@ body{
     color: var(--font-color);
 }
 
-@media only screen and (max-width: 668px) {
-    .grid{
-        grid-template-columns: 1fr;
+@media  screen and (max-width: 668px) {
+    .container{
+        width: 80vw;
+        height: 90vh;
     }
-  }
+    
+    .grid{
+        grid-template-columns: 1fr ;
+        grid-template-rows: 55vh 1fr;
+    }
+
+    .signUp{
+        justify-content: space-between;
+        padding-block: 7vh;
+    }
+
+    .signUp a{
+        margin-inline: 12vw;
+       
+    }
+}

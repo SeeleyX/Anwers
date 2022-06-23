@@ -17,7 +17,6 @@
 
 
 	<body>
-		{% block navbar_block %}
 		<div class="grid">
 			<div class="left-box">
 				<div class="sidebar">
@@ -41,12 +40,12 @@
 				</div>
 			</div>
 			<div class="main-content">
-				
+				{% block body_block %}
+			
+				{% endblock %}
 			</div>
+				
 		</div>
-		{% endblock %}
-		{% block body_block %}
-		{% endblock %}
 		
 	</body>
 

@@ -5,7 +5,6 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="{% static 'css/placeholder.css' %}">
 		{% block extra_links %}
-		<link rel="stylesheet" href="{% static 'css/Astronomy_Main.css' %}">
 		{% endblock %}
 		<title>
 			TITLE: 
@@ -37,7 +36,7 @@
 						<li><a class="main-link inactive" href="#">Maths </a></li>
 						<li><a class="main-link inactive" href="{% url 'learn:astronomy' %}">Astronomy </a></li>						
 					</ul>						
-					<a class="log-in-button" href="{% url 'learn:astronomy' %}">Login / Register </a>
+					<a class="log-in-button" href="{% url 'learn:user_login' %}">Login / Register </a>
 				</div>
 			</div>
 		{% endblock %}

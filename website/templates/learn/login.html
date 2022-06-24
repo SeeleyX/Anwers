@@ -1,0 +1,17 @@
+{% extends 'learn/base.html' %}
+{% load static %}
+
+{% block title_block %}
+	Login
+{% endblock %}
+
+{% block extra_links %}
+{% endblock %}
+
+{% block body_block %}
+	<form id="login_form" method="post" action="{% url 'learn:user_login' %}">
+		<div class="authentication-form">
+			{{ learner_user_form.as_p }}
+		</div>
+	</form>
+{% endblock %}

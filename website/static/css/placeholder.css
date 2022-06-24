@@ -162,7 +162,7 @@ body{
     background: var(--font-color);
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 668px){
     .left-box{
         height: 75px;
         width: 100vw;
@@ -223,15 +223,17 @@ body{
         margin-inline: 20px;
         width: 60px;
         height: 25px;
+        font-size: 13px;
 
     }
     .nav-bar .nav-list li a{
-        top:75px;
+        top:74px;
         left: 0;
         width: 15vw;
         height: 50px;
         padding-block: 10px;
         transform: translateY(-100px);
+        font-size: 13px;
     }
     
 }

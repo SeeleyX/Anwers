@@ -90,7 +90,10 @@ body{
     text-align: center;
     width: 100%;
 }
-.nav-bar .nav-list button{
+.nav-bar .nav-list #logIn{
+    padding-block: 4px;
+    text-align: center;
+    text-decoration: none;
     margin-top: 20px;
     margin-bottom: 40px;
     width: 60px;
@@ -102,8 +105,8 @@ body{
     border-radius: 100vmax;
 }
 
-.nav-bar .nav-list button:hover,
-.nav-bar .nav-list button:focus-within{
+.nav-bar .nav-list #logIn:hover,
+.nav-bar .nav-list #logIn:focus-within{
     color: var(--primary);
     background: var(--tertiary);
 }

@@ -6,7 +6,6 @@
 		<link rel="stylesheet" href="{% static 'css/placeholder.css' %}">
 		<script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
 		{% block extra_links %}
-		<link rel="stylesheet" href="{% static 'css/Astronomy_Main.css' %}">
 		{% endblock %}
 		<title>
 			TITLE: 
@@ -19,6 +18,7 @@
 
 	<body>
 		<div class="grid">
+		{% block navbar_block %}
 			<div class="left-box">
 				<div class="nav-bar">
 					
@@ -59,6 +59,7 @@
                             </svg><a class="title-slide" href="{% url 'learn:astronomy' %}">Maths</a></li>
                         <a href="{% url 'learn:astronomy' %}" id="logIn">LOGIN</a>
 					</ul>						
+<<<<<<< HEAD
 				</div>
 			</div>
 			<div class="main-content">
@@ -68,7 +69,6 @@
 			</div>
 				
 		</div>
-		
 	</body>
 
 </html>

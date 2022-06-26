@@ -1,0 +1,25 @@
+{% extends 'learn/base.html' %}
+{% load static %}
+
+{% block title_block %}
+	Register
+{% endblock %}
+
+{% block extra_links %}
+{% endblock %}
+
+{% block body_block %}
+	{% if registered %}
+		<p>Thank you for joining us<br />
+		<a href="{% url 'learn:learn_base' %}">Return to the homepage</a></p><br />
+	{% else %}
+		<form id="register_form" method="post" action="{% url 'learn:user_register' %}">
+			<div class="authentication-login-div">
+				{% csrf_token %}
+            	<p class="p-login"><input type="text" name="username" value="" size="40" placeholder="Username" /></p> <br />
+            	<p class="p-login"><input type="password" name="password" value="" size="20" placeholder="Password" /></p><br />
+				<p class="p-login"><input type="submit" value="Submit" /></p>
+			</div>
+		</form>
+	{% endif %}
+{% endblock %}

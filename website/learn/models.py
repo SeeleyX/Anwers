@@ -5,7 +5,7 @@ from django.db.models.signals import post_save
 
 class LearnerUser(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	is_admin = models.BooleanField(default=False, null=False)
+	is_user_admin = models.BooleanField(default=False, null=False)
 
 	class Meta:
 		verbose_name_plural = 'Users'

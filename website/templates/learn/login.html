@@ -11,7 +11,9 @@
 {% block body_block %}
 	<form id="login_form" method="post" action="{% url 'learn:user_login' %}">
 		<div class="authentication-form">
+			{% csrf_token %}
 			{{ learner_user_form.as_p }}
+			<p class="p-login"><input type="submit" value="Submit" /></p>
 		</div>
 	</form>
 {% endblock %}

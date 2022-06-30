@@ -1,24 +1,33 @@
-{% extends 'learn/base.html' %}
+
+<!DOCTYPE html>
 {% load static %}
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="{% static 'css/register.css' %}">
+		{% block extra_links %}
+		{% endblock %}
+		<title>
+			Register
+		</title>
+	</head>
 
-{% block title_block %}
-	Register
-{% endblock %}
 
-{% block extra_links %}
-{% endblock %}
+	<body>
+	{% block body_block %}
+		{% if registered %}
+			<p>Thank you for joining us<br />
+			<a href="{% url 'learn:learn_base' %}">Return to the homepage</a></p><br/>
+		{% else %}
+			<form id="register_form" method="post" action="{% url 'learn:user_register' %}">
+				<div class="authentication-register-div">
+					{% csrf_token %}
+					{{ learner_user_form.as_p }}
+					<p class="p-login"><input type="submit" value="Register" /></p>
+				</div>
+			</form>
+		{% endif %}
+	{% endblock %}	
+	</body>
 
-{% block body_block %}
-	{% if registered %}
-		<p>Thank you for joining us<br />
-		<a href="{% url 'learn:learn_base' %}">Return to the homepage</a></p><br />
-	{% else %}
-		<form id="register_form" method="post" action="{% url 'learn:user_register' %}">
-			<div class="authentication-register-div">
-				{% csrf_token %}
-				{{ learner_user_form.as_p }}
-				<p class="p-login"><input type="submit" value="Register" /></p>
-			</div>
-		</form>
-	{% endif %}
-{% endblock %}
+</html>

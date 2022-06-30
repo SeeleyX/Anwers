@@ -1,0 +1,39 @@
+:root{
+
+    --primary: #222831;
+    --secondary: #393E46;
+    --tertiary: #FFD369;
+    --font-color: #EEEEEE;
+    --font-links: 20px;
+    --media-element-gap: 20px;
+}
+
+*{
+    font-family: 'Inconsolata', monospace;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body{
+    background: var(--secondary);
+    overflow: hidden;
+}
+
+#register_form{
+    width: 60vw;
+    height: 80vh;
+    margin-inline: 20vw;
+    margin-block: 10vh;
+    background: var(--tertiary);
+}
+
+#register_form .authentication-register-div{
+    padding-block: 5vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

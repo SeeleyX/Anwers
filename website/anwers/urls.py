@@ -22,5 +22,8 @@ from learn import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('learn/', include('learn.urls')),
+    path('physics/', include('learn.urls')),
+    path('compSci/', include('learn.urls')),
+    path('maths/', include('learn.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

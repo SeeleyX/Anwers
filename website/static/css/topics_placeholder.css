@@ -53,13 +53,15 @@
     padding-bottom: 1vw;
 }
 
-.sub-sub:hover{
+.sub-sub:hover,
+.sub-sub:focus-within{
     transform: scale(1.1);
     background-color: var(--tertiary);
    
 }
 
-.sub-sub:hover p{
+.sub-sub:hover p
+.sub-sub:focus-within p{
     color: var(--primary);
 }
 
@@ -110,6 +112,13 @@
     aspect-ratio: 8/3;
     color: var(--font-color);
 }
+
+.sub-topic:hover,
+.sub-topic:focus-within{
+    outline: 0.5vw solid var(--tertiary);
+    cursor: pointer;
+}
+
 
 .sub-topic h2{
     font-size: 4vw;
@@ -193,6 +202,8 @@
         row-gap: 1rem;
         aspect-ratio:19/20;
     }
+
+
     .sub-topic h2{
         grid-column: span 1;
     }

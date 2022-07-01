@@ -31,12 +31,6 @@
     padding-left: 2vw;
 }
 
-.index{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr  1fr;
-    gap: 1vw;
-}
 .sub-sub{
     display: grid;
     grid-template-rows: 80% ;
@@ -188,13 +182,7 @@
     }
 
 
-    .index{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(2,1fr);
-        gap: 1vw;
-    }
-
-    .index .sub-sub{
+    .sub-sub{
         max-width: 45vw;
     }
 

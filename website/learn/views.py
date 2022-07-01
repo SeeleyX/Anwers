@@ -14,15 +14,19 @@ def astronomy(request):
 	context_dict = {}
 	return render(request, 'learn/astronomy.html', context=context_dict)
 
-def physics(request):
-	context_dict = {
-		'topic_title': 'Physics',
-	}
-	return render(request, 'learn/topic.html', context=context_dict)
+
 
 def maths(request):
 	context_dict = {}
 	return render(request, 'learn/maths.html', context=context_dict)
+
+
+def physics(request):
+	context_dict = {
+		'topic_title':'Physics'
+	}
+	return render(request, 'learn/topic.html', context=context_dict)
+
 
 def learn_base(request):
 	return redirect("/")

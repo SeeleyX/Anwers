@@ -7,10 +7,10 @@
 
 {% block body_block %}
 	<div class="grid-container">
-		<div class="topic-title grid-col-span-2"><h1>{{ topic_title }}</h1></div>
+		<div class="topic-title grid-col-span-2"><h1>{{topic_title}}</h1></div>
 		<div class="index_{{index}} grid-col-span-2">
 		{% for x in sub_topics %}
-			<a class="sub-sub" href="#"><img src="/static/Images/{{x.image}}.png"><p>{{ x.title }}</p></a>
+			<a class="sub-sub" href="{% url 'learn:linear algebra' %}"><img src="/static/Images/{{x.image}}.png"><p>{{x.title}}</p></a>
 		{% endfor %}
 		</div>
 		<div class=" media-scroller " id="pop-videos">

@@ -6,17 +6,21 @@
 {% endblock %}
 
 {% block body_block %}
-<div class="grid-container">
-    <div class="topic-title grid-col-span-2"><h1>{{ sub_topic_title }}</h1></div>
-    <div class="index grid-col-span-2 ">
-    </div>
-    <div class="sub-topic grid-col-span-2">
-        <h2>{{x.sub_sub_title}}</h2>
-        <div id="pre-learn">
-            <p class="description">{{x.sub_sub_description}}</p>
-            <iframe width="560" height="315" src="{{ x.video_src }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  class="sub-video"></iframe>
+    <div class="grid-container">
+        <div class="topic-title grid-col-span-2"><h1>{{sub_topic_title}}</h1></div>
+        <div class="index_sub grid-col-span-2 ">
+        {% for x in sub_sub_topics %}
+            <a class="sub-sub-index" href="{% url 'learn:linear algebra' %}"><p>{{x.title}}</p></a>
+        {% endfor %}
         </div>
+        {% for x in sub_sub_topics %}
+        <a class="sub-sub-topic ">
+            <h2>{{x.title}}</h2>
+            <div class="sub-sub-container">
+                <span> video </span>
+                <p class="sub-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, nobis at. Ipsa vel ut assumenda modi culpa. </p>
+            </div>
+        </a>
+        {% endfor %}
     </div>
-</div>
-
 {% endblock %}

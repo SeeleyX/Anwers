@@ -145,5 +145,6 @@ def learn_base(request):
 def maths_linear_algebra(request):
 	context_dict = {
 		'sub_topic_title': 'Linear Algebra',
+		'href': 'linear_algebra',
 	}
 	return render(request, 'learn/sub-topic.html', context=context_dict)

@@ -8,19 +8,11 @@
 {% block body_block %}
 	<div class="grid-container">
 		<div class="topic-title grid-col-span-2"><h1>{{ topic_title }}</h1></div>
-	{% if topic == 1 %}
 		<div class="index_{{index}} grid-col-span-2">
 		{% for x in sub_topics %}
 			<a class="sub-sub" href="#"><img src="/static/Images/{{x.image}}.png"><p>{{ x.title }}</p></a>
 		{% endfor %}
 		</div>
-	{% else %}
-		<div class="index_{{index}} grid-col-span-2">
-		{% for x in sub_topics %}
-			<a class="sub-sub" href="#"><img src="/static/Images/{{x.image}}.png"><p>{{ x.title }}</p></a>
-		{% endfor %}
-		</div>
-	{% endif %}
 		<div class=" media-scroller " id="pop-videos">
 			<div class="media-element"></div>
 			<div class="media-element" ></div>
@@ -29,7 +21,6 @@
 			<div class="media-element"></div>
 		</div>
 		<div id="forum"></div>
-		{% if topic == 1 %}
 		{% for x in sub_topics %}
 		<div id="{{x.image}}"class="sub-topic grid-col-span-2">
 			<h2>{{x.title}}</h2>
@@ -40,17 +31,8 @@
 			<div id="suggest-vid" class="media-scroller"></div>
 		</div>
 		{% endfor %}
-		{% else%}
-		{% for x in sub_topics %}
-		<div id="{{x.image}}"class="sub-topic grid-col-span-2">
-			<h2>{{x.title}}</h2>
-			<div id="pre-learn">
-				<a href="#"><p>LEARN</p></a>
-				<p class="description"> {{x.description}}</p>
-			</div>
-			<div id="suggest-vid" class="media-scroller"></div>
-		</div>
-		{% endfor %}
-		{% endif %}
 	</div>
 {% endblock %}
+
+
+<!-- href="{% url 'learn:linear algebra' %}" -->

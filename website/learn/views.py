@@ -1,7 +1,12 @@
+from re import template
+# from unittest import loader
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.urls import reverse
 from learn.forms import LearnerUserForm 
 from django.contrib.auth import authenticate, login, logout
+
+from django.template import loader
 
 def index(request):
 	context_dict = {}
@@ -52,5 +57,23 @@ def user_register(request):
 	return render(request, 'learn/register.html', context={'learner_user_form' : learner_user_form, 'registered' : registered})
 
 
+def maths(request):
+	context_dict = {}
+	return render(request, 'learn/maths.html', context=context_dict)
+
+
+def physics(request):
+	context_dict = {
+		'topic_title':'Physics'
+	}
+	return render(request, 'learn/topic.html', context=context_dict)
+	
+
 def learn_base(request):
 	return redirect("/")
+
+def maths_linear_algebra(request):
+	context_dict = {
+		'sub_topic_title': 'Linear Algebra',
+	}
+	return render(request, 'learn/sub-topic.html', context=context_dict)

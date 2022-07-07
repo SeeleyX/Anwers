@@ -20,7 +20,7 @@ class LearnerUser(models.Model):
 
 class Topic(models.Model):
 	topic_name = models.TextField(max_length=100)
-	topic_icon = models.ImageField(upload_to=f'/static/images/{topic_name}/')
+	topic_icon = models.ImageField(upload_to=f'static/Images/{topic_name}/')
 
 	class Meta:
 		verbose_name_plural = 'Topics'

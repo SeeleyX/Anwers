@@ -1,0 +1,20 @@
+{% extends 'learn/base.html' %}
+{% load static %}
+
+{% block title_block %}
+	Login
+{% endblock %}
+
+{% block extra_links %}
+{% endblock %}
+
+{% block body_block %}
+	<form id="login_form" method="post" action="{% url 'learn:user_login' %}">
+		<div class="authentication-form">
+			{% csrf_token %}
+			<p class="p-login"><input type="text" name="username" value="" size="40" placeholder="Username" /></p> <br />
+			<p class="p-login"><input type="password" name="password" value="" size="20" placeholder="Password" /></p><br />
+			<p class="p-login"><input type="submit" value="Submit" /></p>
+		</div>
+	</form>
+{% endblock %}

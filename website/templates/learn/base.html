@@ -3,16 +3,22 @@
 <html> 
 	<head>
 		<meta charset="utf-8" />
-<<<<<<< HEAD
-		<link rel="stylesheet" href="{% static 'css/placeholder.css' %}">
-=======
 		<link rel="stylesheet" href="{% static 'css/placeholder.css' %}">
 		<script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
->>>>>>> 6e837e87c70d0a853262d96f28dd54e535458dfe
+    <script type="text/javascript" src="{% static 'js/placeholder.js' %}"></script>
+		<script src="https://kit.fontawesome.com/1112a67421.js" crossorigin="anonymous"></script>
+				{% block extra_links %}
+		<link rel="stylesheet" href="{% static 'css/subtopics_placeholder.css' %}">
+		<link rel="stylesheet" href="{% static 'css/topics_placeholder.css' %}">
+		<link rel="stylesheet" href="{% static 'css/Physics.css' %}">
+		<link rel="stylesheet" href="{% static 'css/Maths.css' %}">
+		<link rel="stylesheet" href="{% static 'css/Comp_Sci.css' %}">
+		<script type="text/javascript" src="{% static 'js/Physics.js' %}"></script>
+
 		{% block extra_links %}
+
 		{% endblock %}
 		<title>
-			TITLE: 
 			{% block title_block %}
 				base
 			{% endblock %}
@@ -27,43 +33,15 @@
 				<div class="nav-bar">
 					
 					<ul class="nav-list">
-                        <img src="" class="Home logo"></img>
-						<li><svg width="128" height="70" viewBox="0 0 128 70" fill="none" xmlns="http://www.w3.org/2000/svg" id="keyboard" class=" logo">
-                            <rect x="2.5" y="2.5" width="123" height="65" rx="2.5" stroke="#EEEEEE" stroke-width="5"/>
-                            <rect x="104" y="48" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="86" y="48" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="68" y="48" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="50" y="48" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="32" y="48" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="14" y="48" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="104" y="33" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="86" y="33" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="68" y="33" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="50" y="33" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="32" y="33" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="14" y="33" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="104" y="18" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="86" y="18" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="68" y="18" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="50" y="18" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="32" y="18" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            <rect x="14" y="18" width="10" height="4" stroke="#EEEEEE" stroke-width="4"/>
-                            
-                            </svg><a class="title-slide" href="{% url 'learn:astronomy' %}">Computing Science</a></li>
-						<li><svg width="118" height="127" viewBox="0 0 118 127" fill="none" xmlns="http://www.w3.org/2000/svg" id="atom" class=" logo">
-                            <circle cx="59.5" cy="68" r="10.75" stroke="#EEEEEE" stroke-width="21"/>
-                            <circle cx="58.9688" cy="67.4688" r="56.4688" stroke="#EEEEEE" stroke-width="5"/>
-                            <circle cx="59.5" cy="11.6875" r="6.1875" stroke="#EEEEEE" stroke-width="11"/>
-                            <path d="M62 68.5C62 68.3711 62.0304 68.2382 62.0788 68.13C62.1237 68.0298 62.1697 67.9811 62.1843 67.9673C62.211 67.9421 62.1663 68 62 68V86C71.4495 86 80 78.6427 80 68.5H62ZM62 68C61.8337 68 61.789 67.9421 61.8157 67.9673C61.8303 67.9811 61.8763 68.0298 61.9212 68.13C61.9696 68.2382 62 68.3711 62 68.5H44C44 78.6427 52.5505 86 62 86V68ZM62 68.5C62 68.6289 61.9696 68.7618 61.9212 68.87C61.8763 68.9702 61.8303 69.0189 61.8157 69.0327C61.789 69.0579 61.8337 69 62 69V51C52.5505 51 44 58.3573 44 68.5H62ZM62 69C62.1663 69 62.211 69.0579 62.1843 69.0327C62.1697 69.0189 62.1237 68.9702 62.0788 68.87C62.0304 68.7618 62 68.6289 62 68.5H80C80 58.3573 71.4495 51 62 51V69Z"/>
-                            </svg><a class="title-slide" href="{% url 'learn:astronomy' %}">Physics</a></li>
-						<li><svg width="109" height="93" viewBox="0 0 109 93" fill="none" xmlns="http://www.w3.org/2000/svg" id="pi" class=" logo">
-                            <path d="M107.981 11.489C12.3679 -9.3071 1.05583 14.2505 3.27294 22.1812" stroke="#EEEEEE" stroke-width="5"/>
-                            <path d="M36.63 3L26.4391 82.5732" stroke="#EEEEEE" stroke-width="5"/>
-                            <path d="M73.1072 4.06098C60.4876 38.3923 73.1073 111.861 101.852 83.7096" stroke="#EEEEEE" stroke-width="5"/>
-                            </svg><a class="title-slide" href="{% url 'learn:astronomy' %}">Maths</a></li>
+
+                        <a href="{% url 'learn:learn_base' %}" id="Home"><i class="fa-solid fa-font" id="Home"></i></a>
+						<li class="nav-bar-button"><i class="fa-solid fa-code logo" id="bracket"></i><a class="title-slide" href="{% url 'learn:astronomy' %}">Computing Science</a></li>
+						<li class="nav-bar-button"><i class="fa-solid fa-atom logo" id="atom" ></i><a class="title-slide" href="{% url 'learn:physics' %}">Physics</a></li>
+						<li class="nav-bar-button"><i class="fa-solid fa-calculator logo" id="calc" ></i><a class="title-slide" href="{% url 'learn:maths' %}">Maths</a></li>
+
                         <a href="{% url 'learn:astronomy' %}" id="logIn">LOGIN</a>
 					</ul>						
-<<<<<<< HEAD
+
 				</div>
 			</div>
 			<div class="main-content">

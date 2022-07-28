@@ -24,7 +24,11 @@ urlpatterns = [
     path('learn/', include('learn.urls')),
     path('physics/', include('learn.urls')),
     path('maths/', include('learn.urls')),
+<<<<<<< HEAD
     path('astronomy/', include('learn.urls')),
+=======
+    path('computerScience/', include('learn.urls')),
+>>>>>>> origin/struan
     path('maths/linear_algebra', include('learn.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

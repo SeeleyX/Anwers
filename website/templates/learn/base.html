@@ -5,18 +5,15 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="{% static 'css/placeholder.css' %}">
 		<script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/placeholder.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/placeholder.js' %}"></script>
 		<script src="https://kit.fontawesome.com/1112a67421.js" crossorigin="anonymous"></script>
-				{% block extra_links %}
-		<link rel="stylesheet" href="{% static 'css/subtopics_placeholder.css' %}">
-		<link rel="stylesheet" href="{% static 'css/topics_placeholder.css' %}">
-		<link rel="stylesheet" href="{% static 'css/Physics.css' %}">
-		<link rel="stylesheet" href="{% static 'css/Maths.css' %}">
-		<link rel="stylesheet" href="{% static 'css/Comp_Sci.css' %}">
-		<script type="text/javascript" src="{% static 'js/Physics.js' %}"></script>
-
 		{% block extra_links %}
-
+			<link rel="stylesheet" href="{% static 'css/topics_placeholder.css' %}">
+			<link rel="stylesheet" href="{% static 'css/subtopics_placeholder.css' %}">
+			<link rel="stylesheet" href="{% static 'css/Physics.css' %}">
+			<link rel="stylesheet" href="{% static 'css/Maths.css' %}">
+			<link rel="stylesheet" href="{% static 'css/Comp_Sci.css' %}">
+			<script type="text/javascript" src="{% static 'js/Physics.js' %}"></script>
 		{% endblock %}
 		<title>
 			{% block title_block %}
@@ -31,9 +28,7 @@
 		{% block navbar_block %}
 			<div class="left-box">
 				<div class="nav-bar">
-					
 					<ul class="nav-list">
-
                         <a href="{% url 'learn:learn_base' %}" id="Home"><i class="fa-solid fa-font" id="Home"></i></a>
 						<li class="nav-bar-button"><i class="fa-solid fa-code logo" id="bracket"></i><a class="title-slide" href="{% url 'learn:astronomy' %}">Computing Science</a></li>
 						<li class="nav-bar-button"><i class="fa-solid fa-atom logo" id="atom" ></i><a class="title-slide" href="{% url 'learn:physics' %}">Physics</a></li>

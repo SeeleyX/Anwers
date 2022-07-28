@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+:root{
+
+    --primary: #222831;
+    --secondary: #393E46;
+    --tertiary: #FFD369;
+    --font-color: #EEEEEE;
+    --font-links: 20px;
+    --blue-highlight: #6995FF
+}
+
+
+>>>>>>> origin/struan
 .index_phys{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -6,10 +20,24 @@
 }
 
 @media only screen and (max-width: 668px){
+<<<<<<< HEAD
+=======
+    .grid-col-span-2{
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+>>>>>>> origin/struan
 
     .index_comp{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(2,1fr);
         gap: 1vw;
     }
+<<<<<<< HEAD
+=======
+
+    .index_comp .sub-sub{
+        max-width: 45vw;
+    }
+>>>>>>> origin/struan
 }

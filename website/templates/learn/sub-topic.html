@@ -6,30 +6,48 @@
 {% endblock %}
 
 {% block body_block %}
-	<div class="grid-container">
-		<div class="topic-title grid-col-span-2"><h1>{{ }}</h1></div>
-		<div class="index_{{index}} grid-col-span-2">
-{% for x in sub_topics %}
-			<a class="sub-sub" href="#"><img src="/static/Images/{{x.image}}.png"><p>{{ x.title }}</p></a>
-{% endfor %}
-		</div>
-		<div class=" media-scroller " id="pop-videos">
-			<div class="media-element"></div>
-			<div class="media-element" ></div>
-			<div class="media-element"></div>
-			<div class="media-element"></div>
-			<div class="media-element"></div>
-		</div>
-		<div id="forum"></div>
-{% for x in sub_topics %}
-		<div id="{{x.image}}"class="sub-topic grid-col-span-2">
-			<h2>{{x.title}}</h2>
-			<div id="pre-learn">
-				<a href="#"><p>LEARN</p></a>
-				<p class="description"> {{x.description}}</p>
+		<div class="grid-container">
+			<div class="topic-title grid-col-span-2"><h1>{{ }}</h1></div>
+			<div class="index_{{index}} grid-col-span-2">
+	{% for x in sub_topics %}
+				<a class="sub-sub" href="#"><img src="/static/Images/{{x.image}}.png"><p>{{ x.title }}</p></a>
+	{% endfor %}
 			</div>
-			<div id="suggest-vid" class="media-scroller"></div>
-		</div>
-{% endfor %}
+			<div class=" media-scroller " id="pop-videos">
+				<div class="media-element"></div>
+				<div class="media-element" ></div>
+				<div class="media-element"></div>
+				<div class="media-element"></div>
+				<div class="media-element"></div>
+			</div>
+			<div id="forum"></div>
+	{% for x in sub_topics %}
+			<div id="{{x.image}}"class="sub-topic grid-col-span-2">
+				<h2>{{x.title}}</h2>
+				<div id="pre-learn">
+					<a href="#"><p>LEARN</p></a>
+					<p class="description"> {{x.description}}</p>
+				</div>
+				<div id="suggest-vid" class="media-scroller"></div>
+			</div>
+	{% endfor %}
 	</div>
+
+    <div class="grid-container">
+        <div class="topic-title grid-col-span-2"><h1>{{sub_topic_title}}</h1></div>
+        <div class="index_sub grid-col-span-2 ">
+        {% for x in sub_sub_topics %}
+            <a class="sub-sub-index" href="{% url 'learn:linear algebra' %}"><p>{{x.title}}</p></a>
+        {% endfor %}
+        </div>
+        {% for x in sub_sub_topics %}
+        <a class="sub-sub-topic ">
+            <h2>{{x.title}}</h2>
+            <div class="sub-sub-container">
+                <span> video </span>
+                <p class="sub-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, nobis at. Ipsa vel ut assumenda modi culpa. </p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
 {% endblock %}

@@ -31,6 +31,15 @@
     padding-left: 2vw;
 }
 
+<<<<<<< HEAD
+=======
+.index{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr  1fr;
+    gap: 1vw;
+}
+>>>>>>> origin/struan
 .sub-sub{
     display: grid;
     grid-template-rows: 80% ;
@@ -53,15 +62,23 @@
     padding-bottom: 1vw;
 }
 
+<<<<<<< HEAD
 .sub-sub:hover,
 .sub-sub:focus-within{
+=======
+.sub-sub:hover{
+>>>>>>> origin/struan
     transform: scale(1.1);
     background-color: var(--tertiary);
    
 }
 
+<<<<<<< HEAD
 .sub-sub:hover p
 .sub-sub:focus-within p{
+=======
+.sub-sub:hover p{
+>>>>>>> origin/struan
     color: var(--primary);
 }
 
@@ -113,6 +130,7 @@
     color: var(--font-color);
 }
 
+<<<<<<< HEAD
 .sub-topic:hover,
 .sub-topic:focus-within{
     outline: 0.5vw solid var(--tertiary);
@@ -120,6 +138,8 @@
 }
 
 
+=======
+>>>>>>> origin/struan
 .sub-topic h2{
     font-size: 4vw;
     grid-column: span 2;
@@ -191,7 +211,17 @@
     }
 
 
+<<<<<<< HEAD
     .sub-sub{
+=======
+    .index{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2,1fr);
+        gap: 1vw;
+    }
+
+    .index .sub-sub{
+>>>>>>> origin/struan
         max-width: 45vw;
     }
 
@@ -202,8 +232,11 @@
         row-gap: 1rem;
         aspect-ratio:19/20;
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/struan
     .sub-topic h2{
         grid-column: span 1;
     }

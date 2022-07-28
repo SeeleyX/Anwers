@@ -94,6 +94,7 @@ body{
 .nav-bar .nav-list #atom{
     margin-block: 28px;
 }
+
 .nav-bar .nav-list li {
     padding-block: 35px;
     position: relative;
@@ -146,18 +147,20 @@ body{
 .icon-button{
     stroke: var(--primary);
 }
-.nav-bar .nav-list li a.a-button{
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    transform: translateX(0) !important;
-}
 
 .nav-bar .nav-list li i.i-button{
     color: var(--primary);
 }
 
+.nav-bar .nav-list li a .a-button {
+    opacity:  1 !important;
+    pointer-events:  auto !important;
+    transform: translateX(0) !important;
+}
+
 .nav-bar .nav-list li:hover a,
-.nav-bar .nav-list li:focus-within a {
+.nav-bar .nav-list li:focus-within a 
+{
     opacity: 1;
     pointer-events: auto;
     transform: translateX(0);
@@ -165,7 +168,8 @@ body{
 
 
 .nav-bar .nav-list li:hover,
-.nav-bar .nav-list li:focus-within{
+.nav-bar .nav-list li:focus-within
+{
     background: var(--tertiary);
 }
 .nav-bar .nav-list li i{

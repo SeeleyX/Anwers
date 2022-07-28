@@ -2,37 +2,15 @@
 {% load static %}
 
 {% block title_block %}
-	{{ topic_title }}
+	{{ sub_topic_title }}
+{% endblock %}
+
+{% block extra_links %}
+	<link rel="stylesheet" href="{% static 'css/topics_placeholder.css' %}">
+	<link rel="stylesheet" href="{% static 'css/subtopics_placeholder.css' %}">
 {% endblock %}
 
 {% block body_block %}
-		<div class="grid-container">
-			<div class="topic-title grid-col-span-2"><h1>{{ topic_title }}</h1></div>
-			<div class="index_{{index}} grid-col-span-2">
-	{% for x in sub_topics %}
-				<a class="sub-sub" href="#"><img src="/static/Images/{{x.image}}.png"><p>{{ x.title }}</p></a>
-	{% endfor %}
-			</div>
-			<div class=" media-scroller " id="pop-videos">
-				<div class="media-element"></div>
-				<div class="media-element" ></div>
-				<div class="media-element"></div>
-				<div class="media-element"></div>
-				<div class="media-element"></div>
-			</div>
-			<div id="forum"></div>
-	{% for x in sub_topics %}
-			<div id="{{x.image}}"class="sub-topic grid-col-span-2">
-				<h2>{{x.title}}</h2>
-				<div id="pre-learn">
-					<a href="#"><p>LEARN</p></a>
-					<p class="description"> {{x.description}}</p>
-				</div>
-				<div id="suggest-vid" class="media-scroller"></div>
-			</div>
-	{% endfor %}
-	</div>
-
     <div class="grid-container">
         <div class="topic-title grid-col-span-2"><h1>{{sub_topic_title}}</h1></div>
         <div class="index_sub grid-col-span-2 ">

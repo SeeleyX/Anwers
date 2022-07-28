@@ -66,14 +66,8 @@
 .sub-sub-topic:hover{
     outline: 0.5vw solid var(--tertiary);
     cursor: pointer;
-    background: var(--tertiary);
-    color: var(--primary);
 }
 
-.sub-sub-topic:hover span{
-    background: var(--primary);
-    color: var(--font-color);
-}
 
 @media only screen and (max-width: 668px){
     .index_sub{

@@ -8,9 +8,9 @@ class LearnerUserForm(forms.ModelForm):
 		fields = ('username', 'password', 'email',)
 
 		widgets = {
-			'username' : forms.TextInput(attrs={'placeholder' : 'Username'}),
-			'password' : forms.PasswordInput(attrs={'placeholder' : 'Password'}),
-			'email' : forms.TextInput(attrs={'placeholder' : 'Email'}),
+			'username' : forms.TextInput(attrs={'placeholder' : 'Username', 'class' : 'input-login'}),
+			'password' : forms.PasswordInput(attrs={'placeholder' : 'Password', 'class' : 'input-login'}),
+			'email' : forms.TextInput(attrs={'placeholder' : 'Email', 'class' : 'input-login'}),
 		}
 
 		help_texts = {

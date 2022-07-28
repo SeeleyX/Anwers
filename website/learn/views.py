@@ -186,7 +186,8 @@ def user_register(request):
 			registered = True
 			login(request, learner_user)
 		else:
-			print(student_user_form.errors, student_user_profile_form.errors)
+			print('hello world')
+			#print(student_user_form.errors, student_user_profile_form.errors)
 	else:
 		learner_user_form = LearnerUserForm()
 	return render(request, 'learn/register.html', context={'learner_user_form' : learner_user_form, 'registered' : registered})

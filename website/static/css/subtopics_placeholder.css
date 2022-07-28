@@ -39,10 +39,7 @@
     height: 100%;
     padding: 1rem;
     color: var(--font-color);
-<<<<<<< HEAD
-=======
     transition: all 300ms ease;
->>>>>>> origin/struan
 }
 
 .sub-sub-topic h2{
@@ -67,12 +64,8 @@
 
 
 .sub-sub-topic:hover{
-<<<<<<< HEAD
     outline: 0.5vw solid var(--tertiary);
     cursor: pointer;
-}
-
-=======
     background: var(--tertiary);
     color: var(--primary);
 }
@@ -81,7 +74,6 @@
     background: var(--primary);
     color: var(--font-color);
 }
->>>>>>> origin/struan
 
 @media only screen and (max-width: 668px){
     .index_sub{

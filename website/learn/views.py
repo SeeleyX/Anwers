@@ -6,10 +6,6 @@ from django.urls import reverse
 from learn.forms import LearnerUserForm 
 from django.contrib.auth import authenticate, login, logout
 
-from django.template import loader
-
-from django.template import loader
-
 
 def index(request):
 	context_dict = {}
@@ -152,19 +148,6 @@ def computerScience(request):
         'url': 'algorithmics',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, nobis at. Ipsa vel ut assumenda modi culpa. Optio accusantium, vel praesentium voluptatum explicabo pariatur officia modi quas earum consectetur dolar . Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet voluptatum impedit fugit sit, corrupti rem, quam iusto, excepturi velit exercitationem atque consequuntur consectetur eum nam facilis? Minima asperiores quibusdam nemo!',
       	}]
-	}
-	return render(request, 'learn/topic.html', context=context_dict)
-
-
-
-def maths(request):
-	context_dict = {}
-	return render(request, 'learn/maths.html', context=context_dict)
-
-
-def physics(request):
-	context_dict = {
-		'topic_title':'Physics'
 	}
 	return render(request, 'learn/topic.html', context=context_dict)
 

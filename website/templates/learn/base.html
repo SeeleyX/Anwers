@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="{% static 'css/Maths.css' %}">
 		<link rel="stylesheet" href="{% static 'css/Comp_Sci.css' %}">
 		<script type="text/javascript" src="{% static 'js/Physics.js' %}"></script>
-		{% endblock %}
+				{% endblock %}
 		<title>
 			{% block title_block %}
 				base
@@ -25,18 +25,19 @@
 
 	<body>
 		<div class="grid">
+		{% block navbar_block %}
 			<div class="left-box">
-				<div class="nav-bar">
-					
+				<div class="nav-bar">		
 					<ul class="nav-list">
                         <a href="{% url 'learn:learn_base' %}" id="Home"><i class="fa-solid fa-font" id="Home"></i></a>
 						<li class="nav-bar-button"><i class="fa-solid fa-code logo" id="bracket"></i><a class="title-slide" href="{% url 'learn:astronomy' %}">Computing Science</a></li>
 						<li class="nav-bar-button"><i class="fa-solid fa-atom logo" id="atom" ></i><a class="title-slide" href="{% url 'learn:physics' %}">Physics</a></li>
 						<li class="nav-bar-button"><i class="fa-solid fa-calculator logo" id="calc" ></i><a class="title-slide" href="{% url 'learn:maths' %}">Maths</a></li>
-                        <a href="{% url 'learn:astronomy' %}" id="logIn">LOGIN</a>
+                        <a href="{% url 'learn:user_login' %}" id="logIn">LOGIN</a>
 					</ul>						
 				</div>
 			</div>
+			{% endblock %}
 			<div class="main-content">
 				{% block body_block %}
 			
@@ -44,7 +45,6 @@
 			</div>
 				
 		</div>
-		
 	</body>
 
 </html>

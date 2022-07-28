@@ -1,0 +1,30 @@
+
+{% load static %}
+
+{% block title_block %}
+	Login
+{% endblock %}
+
+{% block extra_links %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block body_block %}
+
+	<div class="frame"></div>
+        <div class="container grid">
+            <form id="login_form" method="post" action="{% url 'learn:user_login' %}">
+				<div class="authentication-form">
+					{% csrf_token %}
+					<h1>Log In</h1>
+					<p class="p-login p-input"><input type="text" name="username" value="" size="40" placeholder="Username" /></p> 
+					<p class="p-login p-input"><input type="password" name="password" value="" size="20" placeholder="Password" /></p>
+					<p class="p-login p-submit"><input type="submit" value="Submit" /></p>
+				</div>
+			</form>
+            <div class="signUp">
+                <p>Click here to register if you are a new member!</p>
+                <a href="{% url 'learn:user_register' %}"> Register </a>
+            </div>
+        </div>
+{% endblock %}
